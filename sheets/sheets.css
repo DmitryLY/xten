@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+h1{
+    font-family: 'Roboto';
+    font-size: 42px;
+}
+
+h2{
+    font-size: 24px;
+	font-family: "Montserrat";
+}
+
+#calculator{
+    background-color: #F4F4F5;
+    border:1px solid #90909A;
+    border-radius: 4px;
+    max-width: 749px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin: 43px 0 31px 0;
+    position: relative;
+}
+
+#calculator #left .box, #calculator #right .box{
+    margin: 30px;
+    position: relative;
+}
+
+#calculator #left, #calculator #right{
+    width: 50%;
+    float: left;
+    min-width: 300px;
+}
+
+#calculator{
+    display: table;
+    content: '';
+    width: 100%;
+}
+
+#calculator .field{
+    clear: both;
+}
+
+#calculator .field:not(:last-child){
+    margin-bottom: 25px;
+}
+
+#calculator .field .field_items{
+    font-size: 12px;
+}
+
+#calculator .field .field_items{
+    display: table;
+    content: '';
+}
+
+#calculator .field .field_items .field_item{
+    border-radius: 2px;
+    background-color: rgba(144 144 154 / 20%);
+    padding: 2px 5px; 
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+#calculator .field .field_items .field_item:hover{
+    background-color: rgba(144 144 154 / 60%);
+}
+
+#calculator .field .field_items .field_item:not(:last-child){
+    margin-right: 5px;
+}
+
+#calculator .field .field_items .field_item{
+    margin-top: 10px;
+}
+
+#calculator #left input{
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#calculator #left .field_name{
+    font-size: 14px;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#calculator #left .field_input{
+    position: relative;
+    width: 100%;
+    padding-top: 36px;
+}
+
+#calculator #left .field_input input{
+    padding-right: 20px;
+}
+
+#calculator #left .field_input input + .ed{
+    position:absolute;
+    right: 13px;
+    top: 11px;
+    font-size: 13px;
+}
+
+#calculator .range_bar_box{
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 0px;
+}
+
+#calculator .range_bar_box .range_bar{
+    /*background-color: #B5A08D;
+    height: 1px;
+    width: 0px;*/
+
+    border-radius: 1px;
+    border: 1px solid #B5A08D;
+}
+
+#calculator .range_bar_box .slider{
+    background-color: #B5A08D;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    left: 0px;
+    top: -6px;
+}
+
+#calculator .range_bar_box .slider:hover, #calculator .range_bar_box .slider.hover:not(:hover) {
+    box-shadow: 0 0 5px #414141;
+    cursor: pointer;
+}
+
+#calculator #right .monthly_payment_box{
+}
+
+#calculator #right #monthly_payment{
+    font-size: 26px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+#calculator #right .monthly_payment_text{
+    font-size: 12px;
+    display: inline-block;
+    width: 120px;
+    vertical-align: bottom;
+}
+
+#calculator #right .svg_download{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#calculator #right .svg_download:hover > path{
+    fill: #515157;
+}
+
+#calculator #right .credit_total_box{
+    margin-top: 38px;
+    margin-bottom: 33px;
+}
+
+#calculator #right .credit_total_box .item{
+    border-bottom:1px dashed #90909A;
+}
+
+#calculator #right .credit_total_box .item > div{
+    background-color: #f4f4f5;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    font-size: 16px;
+}
+
+#calculator #right .credit_total_box .item:not(:last-child){
+    margin-bottom: 21px;
+}
+
+#calculator #right .credit_total_box .item > div:last-child{
+    float: right;
+    font-weight: bold;
+    color: #29282D;
+}
+
+#calculator #right .credit_total_box .item > div:last-child:after{
+    content: ' ₽'
+}
+
+
+#calculator #right #show_graphic_payments{
+    border: 2px solid #B5A08D;
+    border-radius: 4px;
+    color: #B5A08D;
+    width: 100%;
+    padding: 17px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+
+#calculator_box #send_request_online{
+    border: none;
+    background-color: #B5A08D;
+    border-radius: 4px;
+    color: #FFF;
+    max-width: 235px;
+    width: 100%;
+    height: 48px;
+    padding: 14px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+#calculator_box #send_request_online:hover{
+    background-color: #B5A08D;
+}
+
+#calculator_box #resend_request_onemail{
+    border: none;
+    background-color: transparent;
+    max-width: 235px;
+    width: 100%;
+    height: 48px;
+    padding: 14px 8px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    display: inline-block;text-decoration: underline;
+    color: #B5A08D;
+    cursor: pointer;
+}
+
+#calculator_box #resend_request_onemail:hover{
+    text-decoration: none;
+    color: #B5A08D;
+}
+
+
+#calculator .border_left_right{
+    width: 1px;
+    background-color: #DCDCDC;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 50%;
+}
+
+@media(max-width:686px){
+    #calculator .border_left_right{
+        display: none;
+    }
+
+    #calculator #left, #calculator #right{
+        float: none;
+        margin: auto;
+        width: 100%;
+    }
+
+    #calculator_box #resend_request_onemail, #calculator_box #send_request_online{
+        margin: auto;
+        display: block;
+    }
+
+}
+
+
+.graphic_payments_box{
+    margin-top: 66px;
+    margin-bottom: 60px;
+}
+
+#graphic_payments{
+    overflow: auto;
+    font-family: 'Montserrat';
+}
+
+#graphic_payments h2{
+    margin-bottom: 30px;
+}
+
+#graphic_payments table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+#graphic_payments table td{
+    text-wrap: nowrap;
+    border: 1px solid #5E5E61;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #FFF;
+}
+
+#graphic_payments table thead td{
+ background-color: #90909A;
+ color: #fff;
+}
+
+#graphic_payments table tr.total td{
+    font-weight: 700;
+}
+
+#graphic_payments table.fixed{
+    position: absolute;
+    z-index: 2;   
+}
